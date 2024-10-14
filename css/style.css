@@ -1,0 +1,256 @@
+header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; /* Aligns the items in the center horizontally */
+    padding: 20px;
+    background-color: #122932; /* Dark turqouise background color */
+    color: #EEF0F2; /* light gray text color */
+    border: solid;
+    border-color:#000000; /* Black border color */
+}
+
+nav {
+    display: flex; 
+    justify-content: center; /* Aligns items in the center vertically */
+    padding: 10px 0;
+}
+
+nav ul{
+    list-style-type: none; 
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #EEF0F2; /* Light gray text color */
+}
+
+nav a:hover{
+    color:#ccc; /* Darker gray text color upon hover */
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 20px;
+    gap: 20px;
+    background-color: #3a5863; /* Dark Turqouise-gray background */
+}
+
+body {
+    background-color: #3a5863;/* Dark Turqouise-gray background */
+}
+
+footer {
+    display: flex;
+    justify-content: left; /* Aligns the items to the left vertically */
+    align-items: center; /* Aligns the items in the center horizontally */
+    padding: 20px;
+    background-color: #7B878E; /* Gray background color */
+    border: solid; 
+    border-color:#122932; /* Dark turqouise border color */
+}
+
+/* Article Page Styling */
+
+.article-header {
+    display: flex;
+    align-items: center; /* Aligns the items in the center horizontally */
+    gap: 20px;
+    padding: 20px;
+}
+
+.article-content {
+    display: grid;
+    grid-template-columns: 1fr; /* Puts items in a singular column */
+    gap: 20px;
+    padding: 20px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+/* Advertisement Styling */
+
+.advertisement {
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center; /* Aligns the text in the center horizontally */
+    background-color:#7B878E; /* Gray-Turqouise background color */
+}
+
+/* Gallery Styling */
+
+.photo-gallery {
+    width: 100%; /* Allows images to fill the screen no matter how big the screen it */
+    max-width: 800px; /* Sets a max midth for the screen */
+    margin: auto;
+    overflow: hidden; /* Hides images when they aren't showing */
+    position: relative; 
+}
+
+.track{
+    display: flex; 
+    transition: transform 0.5s ease-in-out; /* Allows for smooth transition */
+}
+
+.photo {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out; /* Allows for smooth transition */
+}
+
+.photo img{
+    width: 100%;/* Allows images to fill the screen no matter how big the screen it */
+    height: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
+}
+
+/* Position the "Next" button to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "Prev" button to the left */
+.prev {
+    left: 0;
+}
+
+/* Hover effect for buttons */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Hamburger Menu Style */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+.hamburger {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+/* Index Style */
+
+
+.featured-article img {
+    max-width: 760px;
+    width: 100%; /* Allows images to fill the screen no matter how big the screen it */
+    height: auto;
+}
+
+.featured-article {
+    background-color: #7B878E; /* Gray-Turqouise background color */
+    border-style: solid;
+    padding: 20px;
+}
+
+.latest-news {
+    background-color: #7B878E; /* Gray-Turqouise background color */
+    border-style: solid;
+    padding: 20px;
+
+}
+
+.article-content img{
+    max-width: 1600px; /* Sets a max width for the images */
+    width: 100%; /* Allows images to fill the screen no matter how big the screen it */
+    height: auto;
+}
+
+
+/* Button Style */
+
+button {
+    background-color: #f3f3f3; /* Light-gray background color */
+    border-color: #f3f3f3; /*Light-gray border color */
+}
+
+button:hover {
+    background-color:#ccc; /* Gray background color */
+    border-color:#7B878E; /* Gray-Turqouise border color */
+
+}
+
+/* Article Page Styling */
+
+#Article-1, #Article-2, #Article-3, #Article-4 {
+    border:solid;
+    border-radius: 20px; /* Rounds border */
+    border-width: 2.5px; /* Thickens borders */
+    padding: 20px;
+}
+
+#Article-1 {
+    background-color: #a37b87; /* Gray-Pink background color */
+    border-color:#f3f3f3; /*Light-gray border color */
+}
+
+#Article-2 {
+    background-color: #a91901; /* Red background color */
+    border-color: black; /* Black border color */
+}
+
+#Article-3 {
+    background-color:#9eb5c0; /* Grayish-Light-Blue background color */
+    border-color:#f3f3f3; /*Light-gray border color */
+}
+
+#Article-4 {
+    background-color: #b10012; /* Red background color */
+    border-color:black; /* Black border color */
+}
+
+/* Styling the "Back to Top" button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    display: none; /* Hidden by default */
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: #122932; /* Dark turqouise background color */
+    opacity: .75; /* partial transparency when not hvoered */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #122932; /* Dark turqouise background color upon hover */ 
+}

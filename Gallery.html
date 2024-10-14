@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Gallery</h1>
+            <nav>
+                <div class="hamburger">☰</div>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Article.html">Articles</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="photo-gallery">
+
+            <div class="track">
+                <div class="photo"><img src="images\Gidle Nxde.jpg" alt="Kpop Group (G)I-dle for 'I-Love'"></div>
+                <div class="photo"><img src="images\Chappell Roan VMA.jpg" alt="Chappell Roan at the 2024 VMA's"></div>
+                <div class="photo"><img src="images\Sabrina Carpenter.jpg" alt="Sabrina Carpenter for 'Short N' Sweet'"></div>
+                <div class="photo"><img src="images\Eternal Sunshine Ariana Grande.jpg" alt="Ariana Grande for 'Eternal Sunshine'"></div>
+            </div>
+
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+
+        </main>
+
+        <button class="back-to-top" onclick="scrollToTop()">&#8679;</button>        
+
+        <footer>
+            <p>Contact us at SonicQuill@example.com</p>
+        </footer>
+
+        <script>
+            document.querySelector('.hamburger').addEventListener('click', function() {
+                document.querySelector('nav ul').classList.toggle('active');
+            });
+
+            let currentIndex = 0;
+
+            function moveSlide(n) {
+            let track = document.querySelector('.track');
+            let images = document.querySelectorAll('.photo');
+            const totalImages = images.length;
+
+            currentIndex += n;
+
+            /* Loop back to the first or last image if out of bounds */
+            if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            }
+
+            const newTranslateX = -currentIndex * 100; // Moves by 100% of the container width
+            track.style.transform = `translateX(${newTranslateX}%)`;
+            }
+
+            const backToTopButton = document.querySelector('.back-to-top');
+
+            // Show the button when user scrolls down 100px from the top of the document
+            window.onscroll = function() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    backToTopButton.style.display = "block"; // Show button
+                } else {
+                    backToTopButton.style.display = "none"; // Hide button
+                }
+            };
+
+            // Function to scroll to the top when button is clicked
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Smooth scrolling effect
+                });
+            }
+        </script>
+
+    </body>
+</html>

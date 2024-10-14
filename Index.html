@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sonic Quill</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Sonic Quill</h1>
+            <nav>
+                <div class="hamburger">☰</div>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Article.html">Articles</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="featured-article">
+                <h2>Featured Article</h2>
+                <img src="images\Gidle Nxde.jpg" alt="Gidle Nxde Poster">
+                <h3>The Conceptual Depth of (G)I-DLE: Exploring Themes in “Tomboy” and “Nxde”</h3>
+                <h4>Introduction</h4>
+                <p>Since their debut in 2018, (G)I-DLE has distinguished themselves in the K-Pop industry by crafting music that transcends catchy melodies and vibrant choreography. Their exploration of complex themes has resonated deeply with fans, inviting them to engage with the deeper meanings behind their songs. This article focuses on two standout tracks—“Tomboy” and “Nxde”—which encapsulate the group's commitment to empowerment, societal critique, and emotional depth.
+                </p>
+                <h4>“Tomboy”: Embracing Individuality</h4>
+                <p>
+                    Released in 2022, “Tomboy” is a bold anthem that celebrates individuality and challenges traditional gender norms. The song presents a powerful narrative where the members assert their identity, rejecting societal expectations of femininity.
+
+                    Lyrically, “Tomboy” is a declaration of self-acceptance. The members confidently proclaim their preferences and attitudes, embracing a more masculine identity while simultaneously celebrating their femininity. Lines that challenge the stereotypes associated with women serve as an empowering message, encouraging listeners to define their identity on their own terms.
+                    
+                    The accompanying music video further amplifies this theme, featuring dynamic choreography and striking visuals that convey strength and confidence. The use of a punk-inspired aesthetic, complete with edgy fashion choices, reinforces the song's message of defiance against societal norms. By presenting themselves in a way that subverts traditional expectations, (G)I-DLE inspires their fans to embrace their true selves without fear of judgment.
+                </p>
+                <button class="button" onclick="window.location.href='Article.html#Article-1'">Continue</button>
+            </section>
+            <section class="latest-news">
+                <h2>Latest News</h2>
+                <h3>The 2024 MTV Video Music Awards: A Night of Glitz, Glamour, and Groundbreaking Talent</h3>
+                <p>
+                    The 2024 MTV Video Music Awards (VMAs) took place at the Barclays Center in Brooklyn, New York, delivering an unforgettable evening filled with excitement, creativity, and memorable performances. This year’s ceremony highlighted both established icons and rising stars, showcasing the vibrant and ever-evolving landscape of the music industry.
+                </p>
+                <button class="button" onclick="window.location.href='Article.html#Article-2'">More...</button>
+                <h3>Sabrina Carpenter's Evolution: From Emotional Vulnerability in Emails I Can’t Send to Playful Sophistication in Short n' Sweet</h3>
+                <p>
+                    Sabrina Carpenter's recent albums, Emails I Can’t Send (2022) and Short n' Sweet (2024), showcase her growth as a singer-songwriter and her ability to transition between emotional vulnerability and lighthearted fun. These albums, though distinct in tone and content, reflect her evolving artistry and have contributed significantly to her increasing popularity in the pop music scene.
+                </p>
+                <button class="button" onclick="window.location.href='Article.html#Article-3'">More...</button>
+                <h3>Exploring the Highlights of Eternal Sunshine by Ariana Grande</h3>
+                <p>
+                    Ariana Grande’s latest album, Eternal Sunshine, released in January 2024, marks a significant milestone in her career, showcasing her evolution as an artist through a series of impactful singles. This article delves into four standout tracks: “yes, and?”, “That Boy Is Mine,” “We Can't Be Friends (Wait for Your Love),” and “Ordinary Things (feat. Nonna).” Each song explores various themes of love, friendship, and self-acceptance, reflecting Grande’s personal growth and artistry.
+                </p>
+                <button class="button" onclick="window.location.href='Article.html#Article-4'">More...</button>
+            </section>
+        </main>
+
+        <button class="back-to-top" onclick="scrollToTop()">&#8679;</button>
+
+        <footer>
+            <p>Contact us at SonicQuill@example.com</p>
+        </footer>
+
+        <script>
+            document.querySelector('.hamburger').addEventListener('click', function() {
+                document.querySelector('nav ul').classList.toggle('active');
+            });
+
+            const backToTopButton = document.querySelector('.back-to-top');
+
+            // Show the button when user scrolls down 100px from the top of the document
+            window.onscroll = function() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    backToTopButton.style.display = "block"; // Show button
+                } else {
+                    backToTopButton.style.display = "none"; // Hide button
+                }
+            };
+
+            // Function to scroll to the top when button is clicked
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Smooth scrolling effect
+                });
+            }
+        </script>
+    </body>
+</html>
